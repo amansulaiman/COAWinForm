@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="COAdatabase" Class="COSDataClassesDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=SERVER\SQLEXPRESS16;Initial Catalog=COAdatabase;Integrated Security=True" SettingsObjectName="COAWinForm.Properties.Settings" SettingsPropertyName="COAdatabaseConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Leadger" Member="Leadgers">
+    <Type Name="Leadger">
+      <Column Name="Tran_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Tran_Date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Source_ID" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="Source_Name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Describtion" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Destination_ID" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="Destination_Name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Dr" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="Cr" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="Balance" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ChartOfAccounts" Member="ChartOfAccounts">
+    <Type Name="ChartOfAccount">
+      <Column Name="Acct_ID" Type="System.String" DbType="NChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Acct_Name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Parent_ID" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="Balance" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>

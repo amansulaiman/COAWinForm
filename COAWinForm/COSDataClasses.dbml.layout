@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="COSDataClasses">
+  <DataContextMoniker Name="/COSDataClassesDataContext" />
+  <nestedChildShapes>
+    <classShape Id="7c2e5ed7-fa48-47dd-a28d-b7c9a4b9226f" absoluteBounds="3, 1.375, 2, 2.7324039713541666">
+      <DataClassMoniker Name="/COSDataClassesDataContext/Leadger" />
+      <nestedChildShapes>
+        <elementListCompartment Id="861e6bf0-b991-4eda-9d0f-c53719ed4208" absoluteBounds="3.015, 1.835, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="8aa1334c-4389-452a-9135-569fcdd4c956" absoluteBounds="0.5, 1.5, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/COSDataClassesDataContext/ChartOfAccount" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c71362fd-8aa8-4d30-8052-2cbc8ffab7c7" absoluteBounds="0.51500000000000012, 1.96, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

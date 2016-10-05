@@ -85,7 +85,6 @@
             this.cmbRoot.Name = "cmbRoot";
             this.cmbRoot.Size = new System.Drawing.Size(254, 28);
             this.cmbRoot.TabIndex = 5;
-            this.cmbRoot.Text = "Select Root Account";
             this.cmbRoot.ValueMember = "Acct_ID";
             // 
             // chartOfAccountsBindingSource
@@ -110,12 +109,14 @@
             // 
             // button2
             // 
+            this.button2.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.button2.Location = new System.Drawing.Point(143, 177);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(127, 36);
             this.button2.TabIndex = 7;
             this.button2.Text = "Close";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // chartOfAccountsTableAdapter
             // 
@@ -135,8 +136,10 @@
             // 
             // Add_Account
             // 
+            this.AcceptButton = this.button1;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.button2;
             this.ClientSize = new System.Drawing.Size(281, 219);
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.button2);
@@ -163,16 +166,16 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtAcctName;
-        private System.Windows.Forms.TextBox txtAcctID;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox cmbRoot;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private Model.COA_DataSets cOA_DataSets;
-        private System.Windows.Forms.BindingSource chartOfAccountsBindingSource;
-        private Model.COA_DataSetsTableAdapters.ChartOfAccountsTableAdapter chartOfAccountsTableAdapter;
-        private System.Windows.Forms.CheckBox checkBox1;
+        public System.Windows.Forms.Label label1;
+        public System.Windows.Forms.TextBox txtAcctName;
+        public System.Windows.Forms.TextBox txtAcctID;
+        public System.Windows.Forms.Label label2;
+        public System.Windows.Forms.ComboBox cmbRoot;
+        public System.Windows.Forms.Button button1;
+        public System.Windows.Forms.Button button2;
+        public Model.COA_DataSets cOA_DataSets;
+        public System.Windows.Forms.BindingSource chartOfAccountsBindingSource;
+        public Model.COA_DataSetsTableAdapters.ChartOfAccountsTableAdapter chartOfAccountsTableAdapter;
+        public System.Windows.Forms.CheckBox checkBox1;
     }
 }

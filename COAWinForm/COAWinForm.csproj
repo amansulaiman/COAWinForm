@@ -81,7 +81,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>COSDataClasses.dbml</DependentUpon>
     </Compile>
-    <Compile Include="Model\Account.cs" />
     <Compile Include="Model\COA_DataSets.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -97,7 +96,7 @@
     <Compile Include="View\AccountsTree.Designer.cs">
       <DependentUpon>AccountsTree.cs</DependentUpon>
     </Compile>
-    <Compile Include="Model\Child_Account.cs" />
+    <Compile Include="Model\Account.cs" />
     <Compile Include="View\AcctDetailUC.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -110,6 +109,18 @@
     <Compile Include="View\Add_Account.Designer.cs">
       <DependentUpon>Add_Account.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\Credit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Credit.Designer.cs">
+      <DependentUpon>Credit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Leadger.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Leadger.Designer.cs">
+      <DependentUpon>Leadger.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -118,6 +129,15 @@
     </Compile>
     <Compile Include="Controller\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="View\NewTransaction.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\NewTransaction.Designer.cs">
+      <DependentUpon>NewTransaction.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="View\NewTransaction.resx">
+      <DependentUpon>NewTransaction.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="COSDataClasses.dbml.layout">
       <DependentUpon>COSDataClasses.dbml</DependentUpon>
     </None>
@@ -132,6 +152,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\Add_Account.resx">
       <DependentUpon>Add_Account.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Credit.resx">
+      <DependentUpon>Credit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Leadger.resx">
+      <DependentUpon>Leadger.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>

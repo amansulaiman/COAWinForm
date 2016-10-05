@@ -82,10 +82,37 @@ namespace COAWinForm.View
                 cmbRoot.Focus();
                 return false;
             }
+            else if (checkName())
+            {
+                MessageBox.Show("Please Enter Another Account Name");
+                txtAcctName.Focus();
+                return false;
+            }
             else
             {
                 return true;
             }
+        }
+
+        private bool checkName()
+        {
+            var db = new COSDataClassesDataContext();
+            var checkName_ = from p in db.ChartOfAccounts
+                             where p.Acct_Name == txtAcctName.Text
+                             select p;
+            if (checkName_.Count() == 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

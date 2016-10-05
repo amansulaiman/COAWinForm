@@ -102,11 +102,11 @@ namespace COAWinForm.View
                              select p;
             if (checkName_.Count() == 0)
             {
-                return true;
+                return false;
             }
             else
             {
-                return false;
+                return true;
             }
         }
 

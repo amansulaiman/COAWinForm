@@ -17,7 +17,7 @@ namespace COAWinForm.View
         public Accout currentAccount { get; set; }
         public List<String> parentsAcounts { get; set; }
         public string currID { get; set; }
-        public bool Refresh { get; set; } = false;
+        public bool refreshData { get; set; } = false;
 
 
         public AcctDetailUC()
@@ -55,7 +55,7 @@ namespace COAWinForm.View
                                       select p;
 
                         dataGridView1.DataSource = accTran;
-                        Refresh = true;
+                        refreshData = true;
                     }
                 }
             }
@@ -70,7 +70,7 @@ namespace COAWinForm.View
             MessageBox.Show(currentAccount.Acct_Name);
             if (newAcct.ShowDialog() == DialogResult.OK)
             {
-                Refresh = true;
+                refreshData = true;
             }
         }
 

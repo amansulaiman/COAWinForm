@@ -186,7 +186,7 @@
             this.acctDetailUC1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.acctDetailUC1.Name = "acctDetailUC1";
             this.acctDetailUC1.parentsAcounts = null;
-            this.acctDetailUC1.Refresh = false;
+            this.acctDetailUC1.refreshData = false;
             this.acctDetailUC1.Size = new System.Drawing.Size(292, 439);
             this.acctDetailUC1.TabIndex = 0;
             this.acctDetailUC1.Load += new System.EventHandler(this.acctDetailUC1_Load);

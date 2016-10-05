@@ -15,9 +15,10 @@ namespace COAWinForm
     public partial class Form1 : Form
 
     {
-        //Global Data Contex
-        COSDataClassesDataContext db = new COSDataClassesDataContext();
-
+      
+       
+        private IQueryable<ChartOfAccount> accountDetail;
+        private IQueryable<Leadger> trandetails;
 
         public Form1()
         {
@@ -32,19 +33,20 @@ namespace COAWinForm
 
         private void AddChildBtn_Click(object sender, EventArgs e)
         {
-            if (acctDetailUC1.Refresh)
+            if (acctDetailUC1.refreshData)
             {
                 loadAccounts();
-                acctDetailUC1.Refresh = false;
+                acctDetailUC1.refreshData = false;
             }
         }
 
         private void CreditBtn_Click(object sender, EventArgs e)
         {
-            if (acctDetailUC1.Refresh)
+            if (acctDetailUC1.refreshData)
             {
+                //treeViewBound1.Refresh();
                 loadAccounts();
-                acctDetailUC1.Refresh = false;
+                acctDetailUC1.refreshData = false;
             }
         }
 
@@ -54,16 +56,18 @@ namespace COAWinForm
 
         private void TreeViewBound1_AfterSelect(object sender, TreeViewEventArgs e)
         {
+            COSDataClassesDataContext db = new COSDataClassesDataContext();
 
             //Account Details
-            var accountDetail = from p in db.ChartOfAccounts
-                                where p.Acct_ID == treeViewBound1.SelectedValue.ToString()
-                                select p;
+            accountDetail = from p in db.ChartOfAccounts
+                            where p.Acct_ID == treeViewBound1.SelectedValue.ToString()
+                            select p;
 
             //Transaction Details
-            var trandetails = from p in db.Leadgers
-                              where p.Source_ID == treeViewBound1.SelectedValue.ToString() || p.Destination_ID == treeViewBound1.SelectedValue.ToString()
-                              select p;
+            
+            trandetails = from p in db.Leadgers
+                          where p.Source_ID == treeViewBound1.SelectedValue.ToString() || p.Destination_ID == treeViewBound1.SelectedValue.ToString()
+                          select p;
 
             acctDetailUC1.acctName.Text = accountDetail.First().Acct_Name;
             acctDetailUC1.balValue.Text = accountDetail.First().Balance.Value.ToString();
@@ -87,6 +91,8 @@ namespace COAWinForm
             acctDetailUC1.parentsAcounts = pAccts;
             acctDetailUC1.currID = treeViewBound1.SelectedValue.ToString();
             acctDetailUC1.Visible = true;
+
+
         }
 
         private TreeNode[] GetParentNodes(TreeNode node_)
@@ -109,6 +115,7 @@ namespace COAWinForm
 
         void loadAccounts()
         {
+            COSDataClassesDataContext db = new COSDataClassesDataContext();
             var acctsdata = from p in db.ChartOfAccounts
                             select p;
 
